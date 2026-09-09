@@ -1,0 +1,13 @@
+{
+    "vize.serverPath": "/home/apv/dev/issue_reproductions/vize-vue-2.7-virtual-types/node_modules/vize/bin/vize",
+    "vize.enable": true,
+    "vize.lint.enable": true,
+    "vize.typecheck.enable": true,
+    "vize.editor.enable": true,
+    "vize.ecosystem.enable": true,
+    "js/ts.experimental.useTsgo": true,
+    "js/ts.tsdk.path": "/home/apv/dev/issue_reproductions/vize-vue-2.7-virtual-types/node_modules/typescript",
+    "vize.formatting.enable": true,
+    "vize.legacyVue2.enable": true,
+    "editor.defaultFormatter": "ubugeeei.vize"
+}

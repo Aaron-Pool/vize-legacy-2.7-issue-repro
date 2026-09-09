@@ -10,5 +10,6 @@ export default defineConfig({
     enabled: true,
     legacyVue2: true,
     strict: true,
+    tsconfig: './tsconfig.json',
   },
 });
