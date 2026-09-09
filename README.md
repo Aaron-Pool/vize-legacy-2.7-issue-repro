@@ -9,7 +9,10 @@ compiler: {
   },
 },
 typeChecker: {
+  enabled: true,
   legacyVue2: true,
+  strict: true,
+  tsconfig: './tsconfig.json',
 },
 ```
 
@@ -50,19 +53,9 @@ export default __vize_component__;
 
 The generated instance contains Vue 2 instance members, so `legacyVue2` is taking effect. The generated constructor does not contain the static side of Vue 2's `VueConstructor`, however. Passing that generated type to Vue 2's `h()` therefore fails even though the source component is valid and `vue-tsc` accepts it.
 
-The complete generated output is checked in as [`src/ReproComponent.vue.virtual.ts`](src/ReproComponent.vue.virtual.ts). It can be regenerated with:
-
-```sh
-pnpm exec vize check --tsconfig tsconfig.json \
-  --save-virtual-ts-for src/ReproComponent.vue
-```
-
-The `tsconfig.json` uses an explicit file list so the diagnostic snapshot is not itself included in either type-check.
-
 ## Versions
 
 - Vue 2.7.16
 - Vize 0.391.0
-- Vite 3.2.11
-- vue-tsc 2.2.8
-- TypeScript 5.4.5
+- vue-tsc 3.1.0
+- TypeScript 6.0.3
